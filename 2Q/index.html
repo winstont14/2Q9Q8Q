@@ -1,9 +1,11 @@
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Kanit&subset=thai,latin' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 <h1>
-    แบบคัดกรองโรคซึมเศร้า 2 คำถาม (2Q)
+   <center> แบบคัดกรองโรคซึมเศร้า 2 คำถาม (2Q) </center>  <br>
 
 
 <form id="questionnaire-form">
@@ -17,10 +19,10 @@
     2. ใน 2 สัปดาห์ที่ผ่านมา รวมวันนี้ท่านรู้สึก เบื่อ ทำอะไรก็ไม่เพลิดเพลิน หรือไม่<br>
     <input type="radio" name="q2" value="yes"> มี<br>
     <input type="radio" name="q2" value="no"> ไม่มี
-    </p>
+    </p><br>
 
     <center>
-        <button type="button"
+        <button id="button_id" type="button"
         onclick="document.getElementById('questionnaire-form').innerHTML = processQuestionnaire()">
         แปลผลแบบสอบถาม</button>
     </center>
@@ -43,7 +45,7 @@
                 alert("“มีแนวโน้มที่จะเป็นโรคซึมเศร้า”")
                 
                 }
-            document.getElementById("processQuestionnaire").innerHTML = "thankyou"
+            document.getElementById("processQuestionnaire").innerHTML = "thankyou";
                 
             
     }   
