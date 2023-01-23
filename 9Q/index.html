@@ -97,12 +97,18 @@
             <input type="radio" name="q9" value="yes3"> เป็นทุกวัน  <br>
             </p><br>
         
-          <center><input type="submit" value="ส่งแบบประเมิน" id="submitid"></center>
+            <center>
+                <button id="button_id" type="button" >แปลผลแบบสอบถาม</button>
+               
+                
+            </center>
           
   
         </form>
         
         <script>
+          document.getElementById("button_id").addEventListener("click", processQuestionnaire);  
+        
           function processQuestionnaire() {
             var form = document.getElementById("questionnaire-form");
             var q1 = form.elements["q1"].value;
@@ -144,8 +150,7 @@
             }
           }
         
-          var form = document.getElementById("questionnaire-form");
-          form.addEventListener("submit", processQuestionnaire);
+         
         </script>
         
         
