@@ -1,0 +1,53 @@
+<head>
+
+</head>
+<body>
+<h1>
+    แบบคัดกรองโรคซึมเศร้า 2 คำถาม (2Q)
+
+
+<form id="questionnaire-form">
+    <p1> 
+    1. ใน 2 สัปดาห์ที่ผ่านมา รวมวันนี้ ท่านรู้สึก หดหู่ เศร้า หรือท้อแท้สิ้นหวัง หรือไม่ <br>
+    <input type="radio" name="q1" value="yes"> มี<br>
+    <input type="radio" name="q1" value="no"> ไม่มี 
+</p1><br>
+    <p2>
+    2. ใน 2 สัปดาห์ที่ผ่านมา รวมวันนี้ท่านรู้สึก เบื่อ ทำอะไรก็ไม่เพลิดเพลิน หรือไม่<br>
+    <input type="radio" name="q2" value="yes"> มี<br>
+    <input type="radio" name="q2" value="no"> ไม่มี
+    </p2>
+
+    <center><input type="submit" value="ส่งแบบประเมิน" id="submitid"></center>
+</form>
+    <script>
+            function processQuestionnaire()
+    {
+                var form = document.getElementById("questionnaire-form");
+                var q1 = form.elements["q1"].value;
+                var q2 = form.elements["q2"].value;
+
+                var score = 0;
+                if (q1 == "yes") { score++; }
+                if (q2 == "yes") { score+=2; }
+                
+                if (score == 0 ) {
+                alert("ไม่เป็นโรคซึมเศร้า");
+                } 
+                else{
+                alert("“มีแนวโน้มที่จะเป็นโรคซึมเศร้า”")
+
+                }
+    
+            var form = document.getElementById("questionnaire-form");
+            form.addEventListener("submit", processQuestionnaire);
+    }   
+</script>
+    
+</h1>
+
+
+
+
+
+</body>
