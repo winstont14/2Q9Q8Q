@@ -1,0 +1,135 @@
+<head> 
+  <link href='https://fonts.googleapis.com/css?family=Kanit&subset=thai,latin' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+      
+
+      
+
+</head>
+<centered>
+<body>
+
+    <h1> <center>
+        แบบประเมินการฆ่าตัวตาย 8 คำถาม (8Q) </center>  
+        
+       <form id="questionnaire-form">
+        
+          
+    <h2><center>กรุณาตอบแบบสอบถามตามความเป็นจริง</center></h2><br>
+          <p2 id="m1"><center>*******ในช่วง 1 เดือนที่ผ่านมารวมวันนี้*******</center></p2>
+          <p id="q1" >
+          1. มีความคิดอยากตาย หรือ คิดว่าตายไปจะดีกว่า ?
+          <br>
+          <input type="radio" name="q1" value="yes"> มี<br>
+          <input type="radio" name="q1" value="no"> ไม่มี
+          </p>
+        
+      
+        <p>
+          2. อยากทำร้ายตัวเอง หรือ ทำให้ตัวเองบาดเจ็บ ?
+          <br>
+          <input type="radio" name="q2" value="yes"> มี<br>
+          <input type="radio" name="q2" value="no"> ไม่มี
+        </p>
+      
+        <p>
+          3. คิดเกี่ยวกับการฆ่าตัวตาย
+          <br>
+          <input type="radio" name="q3" value="yes"> คิด<br>
+          <input type="radio" name="q3" value="no"> ไม่คิด
+        </p>
+      
+        <p>
+          3.1 ท่านสามารถควบคุมความคิดอยากฆ่าตัวตาย
+          <br>
+          <input type="radio" name="q4" value="yes"> ควบคุมได้<br>
+          <input type="radio" name="q4" value="no"> ควบคุมไม่ได้
+        </p>
+      
+        <p>
+          4. มีแผนการที่จะฆ่าตัวตาย
+          <br>
+          <input type="radio" name="q5" value="yes"> มี<br>
+          <input type="radio" name="q5" value="no"> ไม่มี
+        </p>
+        <p>
+          5.ได้เตรียมการที่จะทำร้ายตนเองหรือเตรียมการจะฆ่าตัวตาย โดยตั้งใจว่าจะให้ตายจริง ๆ
+            <br>
+            <input type="radio" name="q6" value="yes"> มี <br>
+            <input type="radio" name="q6" value="no"> ไม่มี
+          </p>
+        <p>
+          6.ได้ทำให้ตนเองบาดเจ็บแต่ไม่ตั้งใจที่จะทำให้เสียชีวิต
+              <br>
+              <input type="radio" name="q7" value="yes"> มี<br>
+              <input type="radio" name="q7" value="no"> ไม่มี
+         </p>
+        <p>
+          7.ได้พยายามฆ่าตัวตายโดยคาดหวัง/ตั้งใจที่จะให้ตาย
+                <br>
+                <input type="radio" name="q8" value="yes"> มี<br>
+                <input type="radio" name="q8" value="no"> ไม่มี
+        </p>
+    <h2><center>*******ตลอดชีวิตที่ผ่านมา*******</center></h2>
+        <p>
+          8.ท่านเคยพยายามฆ่าตัวตาย
+                  <br>
+                  <input type="radio" name="q9" value="yes"> มี<br>
+                  <input type="radio" name="q9" value="no"> ไม่มี
+          </p><br>
+      
+        <center><input type="submit" value="ส่งแบบประเมิน" id="submitid"></center>
+        
+
+      </form>
+      
+      <script>
+        function processQuestionnaire() {
+          var form = document.getElementById("questionnaire-form");
+          var q1 = form.elements["q1"].value;
+          var q2 = form.elements["q2"].value;
+          var q3 = form.elements["q3"].value;
+          var q4 = form.elements["q4"].value;
+          var q5 = form.elements["q5"].value;
+          var q6 = form.elements["q6"].value;
+          var q7 = form.elements["q7"].value;
+          var q8 = form.elements["q8"].value;
+          var q9 = form.elements["q9"].value;
+          
+      
+          var score = 0;
+          if (q1 == "yes") { score++; }
+          if (q2 == "yes") { score+=2; }
+          if (q3 == "yes") { score+=6; }
+          if (q4 == "no") { score+=8; }
+          if (q5 == "yes") { score+=8; }
+          if (q6 == "yes") { score+=9; }
+          if (q7 == "yes") { score+=4; }
+          if (q8 == "yes") { score+=10; }
+          if (q9 == "yes") { score+=4; }
+      
+          if (score == 0 ) {
+            alert("ไม่มีแนวโน้มฆ่าตัวตาย");
+          } 
+          else if (score <= 8)
+          {
+            alert("มีแนวโน้มฆ่าตัวตายในปัจจุบัน ระดับน้อย");
+          }
+          else if(score <=17 )
+          {
+            alert("มีแนวโน้มฆ่าตัวตายในปัจจุบัน ระดับปานกลาง");
+          }
+
+          else {
+            alert("มีแนวโน้มฆ่าตัวตายในปัจจุบัน ระดับรุนแรง");
+          }
+        }
+      
+        var form = document.getElementById("questionnaire-form");
+        form.addEventListener("submit", processQuestionnaire);
+      </script>
+      
+      
+    </h1>
+
+</body>
