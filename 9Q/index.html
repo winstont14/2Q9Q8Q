@@ -99,9 +99,9 @@
         
             <center>
                 <button id="button_id" type="button" >แปลผลแบบสอบถาม</button>
-               
+            </center>   
                 
-            </center>
+            
           
   
         </form>
@@ -123,30 +123,49 @@
             
         
             var score = 0;
-            if (q1 == "yes") { score++; }
-            if (q2 == "yes") { score+=2; }
-            if (q3 == "yes") { score+=6; }
-            if (q4 == "no") { score+=8; }
-            if (q5 == "yes") { score+=8; }
-            if (q6 == "yes") { score+=9; }
-            if (q7 == "yes") { score+=4; }
-            if (q8 == "yes") { score+=10; }
-            if (q9 == "yes") { score+=4; }
+            if (q1 == "yes1") { score++; }
+            if (q1 == "yes2") { score+=2; }
+            if (q1 == "yes3") { score+=3; }
+            if (q2 == "yes1") { score++; }
+            if (q2 == "yes2") { score+=2; }
+            if (q2 == "yes3") { score+=3; }
+            if (q3 == "yes1") { score++; }
+            if (q3 == "yes2") { score+=2; }
+            if (q3 == "yes3") { score+=3; }
+            if (q4 == "yes1") { score++; }
+            if (q4 == "yes2") { score+=2; }
+            if (q4 == "yes3") { score+=3; }
+            if (q5 == "yes1") { score++; }
+            if (q5 == "yes2") { score+=2; }
+            if (q5 == "yes3") { score+=3; }
+            if (q6 == "yes1") { score++; }
+            if (q6 == "yes2") { score+=2; }
+            if (q6 == "yes3") { score+=3; }
+            if (q7 == "yes1") { score++; }
+            if (q7 == "yes2") { score+=2; }
+            if (q7 == "yes3") { score+=3; }
+            if (q8 == "yes1") { score++; }
+            if (q8 == "yes2") { score+=2; }
+            if (q8 == "yes3") { score+=3; }
+            if (q9 == "yes1") { score++; }
+            if (q9 == "yes2") { score+=2; }
+            if (q9 == "yes3") { score+=3; }
+            
         
-            if (score == 0 ) {
-              alert("ไม่มีแนวโน้มฆ่าตัวตาย");
+            if (score <= 7 ) {
+              alert("ไม่มีอาการของโรคซึมเศร้าหรือมีอาการของโรคซึมเศร้าระดับน้อยมาก");
             } 
-            else if (score <= 8)
+            else if (score <= 12)
             {
-              alert("มีแนวโน้มฆ่าตัวตายในปัจจุบัน ระดับน้อย");
+              alert("มีอาการของโรคซึมเศร้า ระดับน้อย");
             }
-            else if(score <=17 )
+            else if(score <=18)
             {
-              alert("มีแนวโน้มฆ่าตัวตายในปัจจุบัน ระดับปานกลาง");
+              alert("มีอาการของโรคซึมเศร้า ระดับปานกลาง");
             }
   
             else {
-              alert("มีแนวโน้มฆ่าตัวตายในปัจจุบัน ระดับรุนแรง");
+              alert("มีอาการของโรคซึมเศร้า ระดับรุนแรง");
             }
           }
         
