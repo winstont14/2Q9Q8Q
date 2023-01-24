@@ -9,10 +9,10 @@ function processQuestionnaire()
                 if (q2 == "yes") { score+=2; }
                 
                 if (score == 0 ) {
-                    swal("ไม่เป็นโรคซึมเศร้า","แปลผลสำเร็จ","success");
+                    swal("ไม่ป่วยเป็นโรคซึมเศร้า","","success");
                 } 
                 else{
-                    swal("“มีแนวโน้มที่จะเป็นโรคซึมเศร้า”","แปลผลสำเร็จ","success")
+                    swal("มีแนวโน้มที่จะเป็นโรคซึมเศร้า","กรุณาทำแบบประเมิน 9Q เป็นขั้นต่อไป ","success")
                 
                 }
             document.getElementById("processQuestionnaire").innerHTML = "thankyou";
