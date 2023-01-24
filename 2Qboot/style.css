@@ -13,17 +13,19 @@ head{
     flex: 0 0 auto;
 }
 h1 {
-    font-size: 40px;
     font-family: 'Kanit', sans-serif;
-    margin: auto;
-    background-color: #ffffff;
     flex: 1 0 auto;
     
+    } 
+h2 {
+        font-family: 'Kanit', sans-serif;
+        flex: 1 0 auto;
+        
     } 
     
 
 p{
-    background-color: rgb(165, 157, 144);
+    
     color: rgb(2, 2, 2);
     font-family: 'Kanit', sans-serif;
     font-size: 22px;
