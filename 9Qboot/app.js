@@ -9,7 +9,19 @@ function processQuestionnaire() {
             var q7 = form.elements["q7"].value;
             var q8 = form.elements["q8"].value;
             var q9 = form.elements["q9"].value;
-            
+            // Create an array of question elements
+            var questions = [q1, q2, q3, q4,q5,q6,q7,q8,q9];
+
+    // Loop through the questions array
+            for (var i = 0; i < questions.length; i++) {
+            var question = questions[i];
+            if (question !== "yes" && question !== "no") {
+          // Display error message
+          swal("โปรดเลือกข้อคำถามให้ครบ", "", "error");
+             document.getElementById("processQuestionnaire").innerHTML = "thankyou";
+             return;
+            }
+        }
         
             var score = 0;
             if (q1 == "yes1") { score++; }
