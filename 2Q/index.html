@@ -27,31 +27,12 @@
         แปลผลแบบสอบถาม</button>
     </center>
 </form>
-    <script>
-            function processQuestionnaire()
-    {
-                var form = document.getElementById("questionnaire-form");
-                var q1 = form.elements["q1"].value;
-                var q2 = form.elements["q2"].value;
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app.js"></script>
+</h1>       
 
-                var score = 0;
-                if (q1 == "yes") { score++; }
-                if (q2 == "yes") { score+=2; }
-                
-                if (score == 0 ) {
-                alert("ไม่เป็นโรคซึมเศร้า");
-                } 
-                else{
-                alert("“มีแนวโน้มที่จะเป็นโรคซึมเศร้า”")
-                
-                }
-            document.getElementById("processQuestionnaire").innerHTML = "thankyou";
-                
-            
-    }   
-</script>
     
-</h1>
+
 
 
 
